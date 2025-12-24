@@ -23,7 +23,8 @@
       justify-content: center;
       text-align: center;
       color: #f4f6ff;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     body::before {
@@ -999,6 +1000,146 @@
       }
       50% {
         transform: translateX(-12px) scale(0.92);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem 0;
+        align-items: flex-start;
+      }
+      .scene {
+        padding: 3rem 1.5rem 2.5rem;
+        border-radius: 32px;
+        width: 95vw;
+        margin: 1rem auto;
+      }
+      .moon {
+        width: 120px;
+        height: 120px;
+        right: 5%;
+        top: 5%;
+      }
+      .gift {
+        width: 180px;
+        height: 180px;
+      }
+      .box::after {
+        inset: 28px;
+      }
+      .ribbon {
+        inset: 18px;
+      }
+      .bow {
+        width: 60px;
+        height: 60px;
+        left: calc(50% - 30px);
+      }
+      .crib {
+        width: 280px;
+        height: 120px;
+        margin-left: -140px;
+        bottom: -30px;
+      }
+      .tree-band {
+        gap: 1.5rem;
+      }
+      .tree {
+        width: 60px;
+        height: 140px;
+      }
+      .snowman {
+        width: 80px;
+        height: 80px;
+        left: 10%;
+        bottom: 10px;
+      }
+      .snowman-head {
+        width: 40px;
+        height: 40px;
+      }
+      .snowman::before {
+        width: 60px;
+        height: 60px;
+        bottom: 35px;
+      }
+      .santa {
+        width: 80px;
+        height: 45px;
+        right: 5%;
+      }
+      .reindeer {
+        width: 80px;
+        height: 40px;
+        right: 15%;
+      }
+      .banner {
+        font-size: 0.65rem;
+        letter-spacing: 0.2rem;
+        padding: 0.5rem 1.5rem;
+        bottom: 15px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+      .hills {
+        height: 140px;
+        bottom: -50px;
+      }
+      .hills::before, .hills::after {
+        display: none;
+      }
+      .collage-card {
+        padding: 1rem;
+        width: 95vw;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .collage-close, .photo-close {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+      }
+      .collage-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      .photo-card {
+        width: 95vw;
+        padding: 0.5rem;
+      }
+      .photo-frame img {
+        height: auto;
+        max-height: 70vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tree-band {
+        gap: 0.8rem;
+      }
+      .tree:nth-child(n+4) {
+        display: none;
+      }
+      .garland {
+        padding: 0 10px;
+        width: 90vw;
+      }
+      .ornament {
+        width: 20px;
+        height: 20px;
+      }
+      .lights-string {
+        width: 90vw;
+      }
+      .lights-string span:nth-child(n+8) {
+        display: none;
+      }
+      .snowman {
+        display: none;
       }
     }
   </style>
